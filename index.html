@@ -12,6 +12,8 @@
 </head>
 <body>
 
+<div class="scroll-progress" id="scroll-progress"></div>
+
 <header class="header" id="header">
   <div class="header__inner container">
     <a href="#" class="header__logo">
@@ -38,9 +40,11 @@
 
   <!-- 2. FV -->
   <section class="fv">
-    <div class="fv__bg">
+    <div class="fv__bg" id="fv-bg">
       <img src="hero-main.jpg" alt="" class="fv__img">
     </div>
+    <div class="fv__decor fv__decor--accent" aria-hidden="true"></div>
+    <div class="fv__decor fv__decor--light" aria-hidden="true"></div>
     <div class="fv__overlay"></div>
     <div class="fv__content container">
       <p class="fv__eyebrow">A DAY TO BECOME YOU</p>
@@ -50,6 +54,10 @@
         Un Jourは、髪を通して「本来の自分」を取り戻すための、完全予約制のプライベートサロンです。
       </p>
       <a href="#access" class="btn btn--primary">WEB予約はこちら</a>
+    </div>
+    <div class="fv__scroll-cue" aria-hidden="true">
+      <span>SCROLL</span>
+      <i class="fv__scroll-chevron"></i>
     </div>
   </section>
 
@@ -96,39 +104,62 @@
     <div class="container">
       <p class="section-eyebrow section-eyebrow--center">REASON</p>
       <h2 class="section-heading section-heading--center">選ばれる理由</h2>
-      <div class="reason__grid">
-        <div class="reason__card">
-          <img src="reason-private.jpg" alt="完全プライベート空間" class="reason__photo">
-          <div class="reason__body">
-            <img src="icons/icon-private.png" alt="" class="reason__icon">
-            <h3>完全プライベート空間</h3>
-            <p>1日3組限定・個室スタイルで、他のお客様と顔を合わせない設計です。</p>
+      <div class="reason-carousel" id="reason-carousel">
+        <button type="button" class="reason-carousel__arrow reason-carousel__arrow--prev" id="reason-prev" aria-label="前のカードを表示">‹</button>
+
+        <div class="reason-carousel__viewport">
+          <div class="reason-carousel__track" id="reason-track">
+            <div class="reason-carousel__slide is-active">
+              <img src="reason-private.jpg" alt="完全プライベート空間" class="reason-carousel__photo">
+              <div class="reason-carousel__body">
+                <img src="icons/icon-private.png" alt="" class="reason-carousel__icon">
+                <h3>完全プライベート空間</h3>
+                <p>1日3組限定・個室スタイルで、他のお客様と顔を合わせない設計です。</p>
+              </div>
+            </div>
+            <div class="reason-carousel__slide">
+              <img src="reason-counseling.jpg" alt="カウンセリング重視" class="reason-carousel__photo">
+              <div class="reason-carousel__body">
+                <img src="icons/icon-counseling.png" alt="" class="reason-carousel__icon">
+                <h3>カウンセリング重視</h3>
+                <p>施術前に30分のカウンセリングで「なりたい自分」を言語化していきます。</p>
+              </div>
+            </div>
+            <div class="reason-carousel__slide">
+              <img src="reason-expertise.jpg" alt="髪質改善の専門知識" class="reason-carousel__photo">
+              <div class="reason-carousel__body">
+                <img src="icons/icon-care.png" alt="" class="reason-carousel__icon">
+                <h3>髪質改善の専門知識</h3>
+                <p>担当スタイリスト全員が髪質診断士の資格を保有しています。</p>
+              </div>
+            </div>
+            <div class="reason-carousel__slide">
+              <img src="reason-homecare.jpg" alt="一人ひとりに合わせたホームケア提案" class="reason-carousel__photo">
+              <div class="reason-carousel__body">
+                <img src="icons/icon-care.png" alt="" class="reason-carousel__icon">
+                <h3>一人ひとりに合わせたホームケア提案</h3>
+                <p>市販品に頼らない、髪質に合わせた処方をご提案します。</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="reason__card">
-          <img src="reason-counseling.jpg" alt="カウンセリング重視" class="reason__photo">
-          <div class="reason__body">
-            <img src="icons/icon-counseling.png" alt="" class="reason__icon">
-            <h3>カウンセリング重視</h3>
-            <p>施術前に30分のカウンセリングで「なりたい自分」を言語化していきます。</p>
-          </div>
-        </div>
-        <div class="reason__card">
-          <img src="reason-expertise.jpg" alt="髪質改善の専門知識" class="reason__photo">
-          <div class="reason__body">
-            <img src="icons/icon-care.png" alt="" class="reason__icon">
-            <h3>髪質改善の専門知識</h3>
-            <p>担当スタイリスト全員が髪質診断士の資格を保有しています。</p>
-          </div>
-        </div>
-        <div class="reason__card">
-          <img src="reason-homecare.jpg" alt="一人ひとりに合わせたホームケア提案" class="reason__photo">
-          <div class="reason__body">
-            <img src="icons/icon-care.png" alt="" class="reason__icon">
-            <h3>一人ひとりに合わせたホームケア提案</h3>
-            <p>市販品に頼らない、髪質に合わせた処方をご提案します。</p>
-          </div>
-        </div>
+
+        <button type="button" class="reason-carousel__arrow reason-carousel__arrow--next" id="reason-next" aria-label="次のカードを表示">›</button>
+      </div>
+
+      <div class="reason-carousel__thumbs" id="reason-thumbs">
+        <button type="button" class="reason-carousel__thumb is-active" data-index="0" aria-label="1枚目を表示">
+          <img src="reason-private.jpg" alt="">
+        </button>
+        <button type="button" class="reason-carousel__thumb" data-index="1" aria-label="2枚目を表示">
+          <img src="reason-counseling.jpg" alt="">
+        </button>
+        <button type="button" class="reason-carousel__thumb" data-index="2" aria-label="3枚目を表示">
+          <img src="reason-expertise.jpg" alt="">
+        </button>
+        <button type="button" class="reason-carousel__thumb" data-index="3" aria-label="4枚目を表示">
+          <img src="reason-homecare.jpg" alt="">
+        </button>
       </div>
     </div>
   </section>
@@ -203,12 +234,12 @@
 
       <div class="voice__list">
         <div class="voice__card">
-          <img src="voice-customer1.jpg" alt="お客様の声1">
+          <div class="voice__card-photo"><img src="voice-customer1.jpg" alt="お客様の声1"></div>
           <p class="voice__comment">「初めて“話さなくていい美容室”に出会えました」</p>
           <p class="voice__attr">30代・会社員</p>
         </div>
         <div class="voice__card">
-          <img src="voice-customer2.jpg" alt="お客様の声2">
+          <div class="voice__card-photo"><img src="voice-customer2.jpg" alt="お客様の声2"></div>
           <p class="voice__comment">「髪質が変わったと周りから驚かれます」</p>
           <p class="voice__attr">40代・自営業</p>
         </div>

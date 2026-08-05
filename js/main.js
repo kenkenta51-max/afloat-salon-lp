@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var fadeTargets = document.querySelectorAll(
-    ".worries, .concept, .reason__card, .service__item, .voice__card, .access__content"
+    ".worries, .concept, .reason-carousel, .service__item, .voice__card, .access__content"
   );
 
   fadeTargets.forEach(function (el) {
@@ -59,4 +59,74 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }, 4000);
   });
+
+  // スクロール進捗バー
+  var progressBar = document.getElementById("scroll-progress");
+
+  function updateScrollProgress() {
+    var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var ratio = scrollHeight > 0 ? (window.scrollY / scrollHeight) * 100 : 0;
+    progressBar.style.width = ratio + "%";
+  }
+
+  if (progressBar) {
+    updateScrollProgress();
+    window.addEventListener("scroll", updateScrollProgress, { passive: true });
+    window.addEventListener("resize", updateScrollProgress);
+  }
+
+  // FVのパララックス（背景をゆっくり動かして奥行きを出す）
+  var fvBg = document.getElementById("fv-bg");
+  var fvSection = document.querySelector(".fv");
+
+  function updateParallax() {
+    if (!fvBg || !fvSection) return;
+    var fvHeight = fvSection.offsetHeight;
+    if (window.scrollY > fvHeight) return;
+    var offset = Math.min(window.scrollY * 0.12, 50);
+    fvBg.style.transform = "translateY(" + offset + "px)";
+  }
+
+  if (fvBg) {
+    window.addEventListener("scroll", updateParallax, { passive: true });
+  }
+
+  // 選ばれる理由：カルーセル
+  var carouselTrack = document.getElementById("reason-track");
+  var carouselPrev = document.getElementById("reason-prev");
+  var carouselNext = document.getElementById("reason-next");
+  var carouselThumbs = document.querySelectorAll("#reason-thumbs .reason-carousel__thumb");
+  var carouselSlides = carouselTrack ? carouselTrack.querySelectorAll(".reason-carousel__slide") : [];
+  var currentSlide = 0;
+
+  function goToSlide(index) {
+    if (!carouselTrack || carouselSlides.length === 0) return;
+    currentSlide = (index + carouselSlides.length) % carouselSlides.length;
+    carouselTrack.style.transform = "translateX(-" + currentSlide * 100 + "%)";
+
+    carouselSlides.forEach(function (slide, i) {
+      slide.classList.toggle("is-active", i === currentSlide);
+    });
+    carouselThumbs.forEach(function (thumb, i) {
+      thumb.classList.toggle("is-active", i === currentSlide);
+    });
+  }
+
+  if (carouselTrack) {
+    if (carouselPrev) {
+      carouselPrev.addEventListener("click", function () {
+        goToSlide(currentSlide - 1);
+      });
+    }
+    if (carouselNext) {
+      carouselNext.addEventListener("click", function () {
+        goToSlide(currentSlide + 1);
+      });
+    }
+    carouselThumbs.forEach(function (thumb, i) {
+      thumb.addEventListener("click", function () {
+        goToSlide(i);
+      });
+    });
+  }
 });
