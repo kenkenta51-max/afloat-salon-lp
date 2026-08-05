@@ -57,6 +57,26 @@ img {
   display: block;
 }
 
+/* 写真の色味統一：生成元が異なる写真同士の色差をならすための
+   ごく薄い暖色オーバーレイ（inset box-shadowで画像に直接重ねる） */
+.fv__img,
+.worries__image img,
+.concept__image img,
+.reason-carousel__thumb img {
+  box-shadow: inset 0 0 0 999px rgba(182, 150, 108, 0.08);
+}
+
+/* 上記の色味オーバーレイ＋カード形式の写真に柔らかい影を追加し、
+   隣接するテキスト/色面ブロックとの継ぎ目感を和らげる */
+.reason-carousel__photo,
+.service__item img,
+.voice__card img,
+.service__other-img {
+  box-shadow:
+    0 8px 24px rgba(37, 30, 28, 0.08),
+    inset 0 0 0 999px rgba(182, 150, 108, 0.08);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -528,19 +548,22 @@ ul {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(37, 30, 28, 0.2);
+  border: 1px solid rgba(37, 30, 28, 0.15);
   background-color: var(--color-bg);
   color: var(--color-text);
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(37, 30, 28, 0.1);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .reason-carousel__arrow:hover {
   background-color: var(--color-accent);
+  border-color: var(--color-accent);
   color: #FFFFFF;
-  transform: scale(1.08);
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(182, 150, 108, 0.35);
 }
 
 .reason-carousel__thumbs {
@@ -760,7 +783,9 @@ ul {
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  box-shadow: 0 16px 32px rgba(37, 30, 28, 0.18);
+  box-shadow:
+    0 16px 32px rgba(37, 30, 28, 0.18),
+    inset 0 0 0 999px rgba(182, 150, 108, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -769,7 +794,9 @@ ul {
 }
 
 .voice__media-item:hover .voice__media-cover {
-  box-shadow: 0 22px 40px rgba(37, 30, 28, 0.24);
+  box-shadow:
+    0 22px 40px rgba(37, 30, 28, 0.24),
+    inset 0 0 0 999px rgba(182, 150, 108, 0.08);
 }
 
 .voice__media-item:first-child:hover .voice__media-cover {
