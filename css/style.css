@@ -563,17 +563,48 @@ ul {
   margin-bottom: 16px;
 }
 
-.voice__media-logos {
+.voice__media-covers {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 48px;
+  margin: 0;
 }
 
-.voice__media-logos img {
-  height: 64px;
+.voice__media-item {
+  margin: 0;
+  width: 260px;
+}
+
+.voice__media-cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  box-shadow: 0 16px 32px rgba(37, 30, 28, 0.18);
+}
+
+.voice__media-item:nth-child(2) .voice__media-cover {
+  transform: translateY(16px);
+}
+
+.voice__media-credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.voice__media-credit img {
+  height: 20px;
   width: auto;
-  opacity: 0.85;
+  opacity: 0.7;
+}
+
+.voice__media-credit span {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: rgba(37, 30, 28, 0.55);
 }
 
 /* アクセス・予約導線
@@ -783,9 +814,18 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .voice__media-logos {
+  .voice__media-covers {
     flex-direction: column;
-    gap: 24px;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .voice__media-item {
+    width: 200px;
+  }
+
+  .voice__media-item:nth-child(2) .voice__media-cover {
+    transform: none;
   }
 
   .access__list > div {
