@@ -29,26 +29,30 @@ document.addEventListener("DOMContentLoaded", function () {
   var fadeTargets = document.querySelectorAll(
     ".worries, .concept, .reason-carousel, .service__item, .voice__card, .access__content"
   );
+  var prefersReducedMotion = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  fadeTargets.forEach(function (el) {
-    el.classList.add("fade-in");
-  });
+  if ("IntersectionObserver" in window && !prefersReducedMotion) {
+    fadeTargets.forEach(function (el) {
+      el.classList.add("fade-in");
+    });
 
-  var observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0, rootMargin: "0px 0px 100px 0px" }
-  );
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0, rootMargin: "0px 0px 100px 0px" }
+    );
 
-  fadeTargets.forEach(function (el) {
-    observer.observe(el);
-  });
+    fadeTargets.forEach(function (el) {
+      observer.observe(el);
+    });
+  }
 
   // セーフティネット：何らかの理由でIntersectionObserverが発火しない場合に
   // コンテンツが非表示のまま残らないようにする
@@ -87,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fvBg.style.transform = "translateY(" + offset + "px)";
   }
 
-  if (fvBg) {
+  if (fvBg && !prefersReducedMotion) {
     window.addEventListener("scroll", updateParallax, { passive: true });
   }
 
