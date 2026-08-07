@@ -938,6 +938,14 @@ ul {
     translate: none;
     transition: none;
   }
+
+  .fv__img {
+    animation: none;
+  }
+
+  .reason-carousel__track {
+    transition: none;
+  }
 }
 
 /* ==========================================================================
