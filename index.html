@@ -1,318 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Un Jour（アンジュール）| 完全予約制プライベートヘアサロン - 表参道</title>
-<meta name="description" content="Un Jour（アンジュール）は、東京・表参道にある完全予約制のプライベートヘアサロンです。1日3組限定、髪を通して本来の自分を取り戻す一日を。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="表参道の一席だけの完全予約制プライベートヘアサロン Un Jour。髪を整える時間まで、誰かに気を遣わなくていい。">
+  <title>Un Jour | 表参道のプライベートヘアサロン</title>
+  <link rel="preload" as="image" href="assets/salon-hero.png" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div class="scroll-progress" id="scroll-progress"></div>
-
-<header class="header" id="header">
-  <div class="header__inner container">
-    <a href="#" class="header__logo">
-      <img src="logo.png" alt="Un Jour">
-      <span class="header__logo-text">アンジュール</span>
-    </a>
-    <nav class="header__nav" id="header-nav">
-      <ul>
-        <li><a href="#concept">コンセプト</a></li>
-        <li><a href="#service">サービス</a></li>
-        <li><a href="#reason">選ばれる理由</a></li>
-        <li><a href="#voice">お客様の声</a></li>
-        <li><a href="#access">アクセス</a></li>
-      </ul>
-      <a href="#access" class="btn btn--primary header__cta">WEB予約はこちら</a>
+  <header class="site-header" data-header>
+    <a class="logo" href="#top" aria-label="Un Jour ホーム">Un Jour</a>
+    <nav class="desktop-nav" aria-label="メインナビゲーション">
+      <a href="#concept">Concept</a><a href="#experience">Experience</a><a href="#stylist">Stylist</a>
+      <a href="#hairstyle">Hair Style</a><a href="#menu">Menu</a><a href="#access">Access</a>
     </nav>
-    <button class="header__toggle" id="header-toggle" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main>
-
-  <!-- 2. FV -->
-  <section class="fv">
-    <div class="fv__bg" id="fv-bg">
-      <img src="hero-main.jpg" alt="" class="fv__img">
+    <div class="header-actions">
+      <a class="header-button header-button--line" href="#line">LINEで相談</a>
+      <a class="header-button header-button--reserve" href="#reserve">初回予約</a>
     </div>
-    <div class="fv__decor fv__decor--accent" aria-hidden="true"></div>
-    <div class="fv__decor fv__decor--light" aria-hidden="true"></div>
-    <div class="fv__overlay"></div>
-    <div class="fv__content container">
-      <p class="fv__eyebrow">A DAY TO BECOME YOU</p>
-      <h1 class="fv__heading">あなたが、あなたに戻る一日を。</h1>
-      <p class="fv__text">
-        忙しい日々の中で、自分のための時間を後回しにしていませんか。<br>
-        Un Jourは、髪を通して「本来の自分」を取り戻すための、完全予約制のプライベートサロンです。
-      </p>
-      <a href="#access" class="btn btn--primary">WEB予約はこちら</a>
-    </div>
-    <div class="fv__scroll-cue" aria-hidden="true">
-      <span>SCROLL</span>
-      <i class="fv__scroll-chevron"></i>
-    </div>
-  </section>
-
-  <!-- 3. 悩み提起セクション -->
-  <section class="worries">
-    <div class="container worries__inner">
-      <div class="worries__image">
-        <img src="worries-mirror.jpg" alt="鏡の前で悩む女性">
-      </div>
-      <div class="worries__content">
-        <p class="section-eyebrow">SUCH A WORRY</p>
-        <h2 class="section-heading">こんなお悩み、ありませんか。</h2>
-        <ul class="worries__list">
-          <li>何を頼めばいいか分からず、いつも同じ髪型になってしまう</li>
-          <li>美容室に行くたび、周りの目や会話が気になって落ち着かない</li>
-          <li>忙しくて、自分のためだけの時間をなかなか取れない</li>
-          <li>髪質やクセに合ったケア方法が分からないまま我流でごまかしている</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. コンセプト説明 -->
-  <section class="concept" id="concept">
-    <div class="concept__image">
-      <img src="interior-wide.jpg" alt="Un Jourの落ち着いた店内">
-    </div>
-    <div class="container concept__content">
-      <p class="section-eyebrow">CONCEPT</p>
-      <h2 class="section-heading">Un Jour（アンジュール）<br>― フランス語で「ある日」の意 ―</h2>
-      <p class="concept__text">
-        ある一日が、あなたを変える。<br><br>
-        わたしたちは、髪を切ることだけがサロンの役割だとは考えていません。
-        日常から少し離れ、自分自身とゆっくり向き合う時間そのものを、
-        あなたに届けたいと思っています。
-        完全予約制・1日3組限定だからこそできる、静かで丁寧なひとときを。
-      </p>
-      <a href="#access" class="btn btn--primary">WEB予約はこちら</a>
-    </div>
-  </section>
-
-  <!-- 5. 選ばれる理由 -->
-  <section class="reason" id="reason">
-    <div class="container">
-      <p class="section-eyebrow section-eyebrow--center">REASON</p>
-      <h2 class="section-heading section-heading--center">選ばれる理由</h2>
-      <div class="reason-carousel" id="reason-carousel">
-        <button type="button" class="reason-carousel__arrow reason-carousel__arrow--prev" id="reason-prev" aria-label="前のカードを表示">‹</button>
-
-        <div class="reason-carousel__viewport">
-          <div class="reason-carousel__track" id="reason-track">
-            <div class="reason-carousel__slide is-active">
-              <img src="reason-private.jpg" alt="完全プライベート空間" class="reason-carousel__photo">
-              <div class="reason-carousel__body">
-                <img src="icons/icon-private.png" alt="" class="reason-carousel__icon">
-                <h3>完全プライベート空間</h3>
-                <p>1日3組限定・個室スタイルで、他のお客様と顔を合わせない設計です。</p>
-              </div>
-            </div>
-            <div class="reason-carousel__slide">
-              <img src="reason-counseling.jpg" alt="カウンセリング重視" class="reason-carousel__photo">
-              <div class="reason-carousel__body">
-                <img src="icons/icon-counseling.png" alt="" class="reason-carousel__icon">
-                <h3>カウンセリング重視</h3>
-                <p>施術前に30分のカウンセリングで「なりたい自分」を言語化していきます。</p>
-              </div>
-            </div>
-            <div class="reason-carousel__slide">
-              <img src="reason-expertise.jpg" alt="髪質改善の専門知識" class="reason-carousel__photo">
-              <div class="reason-carousel__body">
-                <img src="icons/icon-care.png" alt="" class="reason-carousel__icon">
-                <h3>髪質改善の専門知識</h3>
-                <p>担当スタイリスト全員が髪質診断士の資格を保有しています。</p>
-              </div>
-            </div>
-            <div class="reason-carousel__slide">
-              <img src="reason-homecare.jpg" alt="一人ひとりに合わせたホームケア提案" class="reason-carousel__photo">
-              <div class="reason-carousel__body">
-                <img src="icons/icon-care.png" alt="" class="reason-carousel__icon">
-                <h3>一人ひとりに合わせたホームケア提案</h3>
-                <p>市販品に頼らない、髪質に合わせた処方をご提案します。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button type="button" class="reason-carousel__arrow reason-carousel__arrow--next" id="reason-next" aria-label="次のカードを表示">›</button>
-      </div>
-
-      <div class="reason-carousel__thumbs" id="reason-thumbs">
-        <button type="button" class="reason-carousel__thumb is-active" data-index="0" aria-label="1枚目を表示">
-          <img src="reason-private.jpg" alt="">
-        </button>
-        <button type="button" class="reason-carousel__thumb" data-index="1" aria-label="2枚目を表示">
-          <img src="reason-counseling.jpg" alt="">
-        </button>
-        <button type="button" class="reason-carousel__thumb" data-index="2" aria-label="3枚目を表示">
-          <img src="reason-expertise.jpg" alt="">
-        </button>
-        <button type="button" class="reason-carousel__thumb" data-index="3" aria-label="4枚目を表示">
-          <img src="reason-homecare.jpg" alt="">
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. サービス紹介 -->
-  <section class="service" id="service">
-    <div class="container">
-      <p class="section-eyebrow section-eyebrow--center">SERVICE</p>
-      <h2 class="section-heading section-heading--center">サービス紹介</h2>
-      <div class="service__list">
-        <div class="service__item">
-          <img src="service-counseling.jpg" alt="プライベートカウンセリング&amp;カット">
-          <div class="service__body">
-            <h3>プライベートカウンセリング&amp;カット</h3>
-            <p>30分のカウンセリングを経て、あなたに本当に似合うスタイルをご提案します。</p>
-          </div>
-        </div>
-        <div class="service__item service__item--reverse">
-          <img src="service-treatment.jpg" alt="髪質改善トリートメント">
-          <div class="service__body">
-            <h3>髪質改善トリートメント</h3>
-            <p>クセや広がりに向き合い、髪本来の質感を取り戻すトリートメントです。</p>
-          </div>
-        </div>
-        <div class="service__item">
-          <img src="service-headspa.jpg" alt="ヘッドスパ">
-          <div class="service__body">
-            <h3>ヘッドスパ</h3>
-            <p>眼精疲労・肩こりにアプローチする、頭皮からのリラクゼーション施術です。</p>
-          </div>
-        </div>
-        <div class="service__item service__item--text-only service__item--reverse">
-          <div class="service__body">
-            <h3>ケアカラー</h3>
-            <p>ダメージを抑えた薬剤設計で、髪への負担を最小限にしたカラーリングです。</p>
-          </div>
-        </div>
-        <div class="service__item service__item--text-only">
-          <div class="service__body">
-            <h3>ブライダル・記念日向けの特別セット</h3>
-            <p>大切な一日のために、あなたらしい特別なスタイルをお仕立てします。</p>
-          </div>
-        </div>
-      </div>
-      <div class="service__other">
-        <h3 class="service__other-heading">OTHER MENU</h3>
-        <img src="menu-board.jpg" alt="その他メニュー一覧" class="service__other-img">
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. 実績・お客様の声 -->
-  <section class="voice" id="voice">
-    <div class="container">
-      <p class="section-eyebrow section-eyebrow--center">VOICE &amp; RECORD</p>
-      <h2 class="section-heading section-heading--center">実績・お客様の声</h2>
-
-      <div class="voice__stats">
-        <div class="voice__stat">
-          <p class="voice__stat-number">5<span>年</span></p>
-          <p class="voice__stat-label">開業年数</p>
-        </div>
-        <div class="voice__stat">
-          <p class="voice__stat-number">3,200<span>名+</span></p>
-          <p class="voice__stat-label">のべ来店数</p>
-        </div>
-        <div class="voice__stat">
-          <p class="voice__stat-number">78<span>%</span></p>
-          <p class="voice__stat-label">半年以内のリピート率</p>
-        </div>
-      </div>
-
-      <div class="voice__list">
-        <div class="voice__card">
-          <div class="voice__card-photo"><img src="voice-customer1.jpg" alt="お客様の声1"></div>
-          <p class="voice__comment">「初めて“話さなくていい美容室”に出会えました」</p>
-          <p class="voice__attr">30代・会社員</p>
-        </div>
-        <div class="voice__card">
-          <div class="voice__card-photo"><img src="voice-customer2.jpg" alt="お客様の声2"></div>
-          <p class="voice__comment">「髪質が変わったと周りから驚かれます」</p>
-          <p class="voice__attr">40代・自営業</p>
-        </div>
-      </div>
-
-      <div class="voice__media">
-        <p class="voice__media-label">MEDIA</p>
-        <div class="voice__media-covers">
-          <figure class="voice__media-item">
-            <img src="media-cover2.jpg" alt="HAIR JOURNAL TOKYO 掲載誌面" class="voice__media-cover">
-            <figcaption class="voice__media-credit">
-              <img src="media-logo1.png" alt="HAIR JOURNAL TOKYO">
-              <span>掲載メディア</span>
-            </figcaption>
-          </figure>
-          <figure class="voice__media-item">
-            <img src="media-cover1.jpg" alt="STYLE &amp; LIFE MAGAZINE 掲載誌面" class="voice__media-cover">
-            <figcaption class="voice__media-credit">
-              <img src="media-logo2.png" alt="STYLE &amp; LIFE MAGAZINE">
-              <span>掲載メディア</span>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. アクセス・予約導線 -->
-  <section class="access" id="access">
-    <div class="container access__inner">
-      <div class="access__content">
-        <p class="section-eyebrow">ACCESS &amp; RESERVE</p>
-        <h2 class="section-heading">アクセス・ご予約</h2>
-        <dl class="access__list">
-          <div>
-            <dt>営業時間</dt>
-            <dd>10:00〜19:00（火曜定休・完全予約制）</dd>
-          </div>
-          <div>
-            <dt>アクセス</dt>
-            <dd>東京メトロ表参道駅 徒歩4分</dd>
-          </div>
-        </dl>
-        <p class="access__note">初めての方も、カウンセリングだけのご予約も歓迎しています。</p>
-        <div class="access__cta">
-          <a href="#" class="btn btn--primary">WEB予約はこちら</a>
-          <a href="#" class="btn btn--outline">LINEで相談する</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- 9. フッター -->
-<footer class="footer">
-  <div class="container footer__inner">
-    <a href="#" class="footer__logo">
-      <img src="logo.png" alt="Un Jour（アンジュール）">
-    </a>
-    <nav class="footer__nav">
-      <ul>
-        <li><a href="#concept">コンセプト</a></li>
-        <li><a href="#service">サービス</a></li>
-        <li><a href="#reason">選ばれる理由</a></li>
-        <li><a href="#voice">お客様の声</a></li>
-        <li><a href="#access">アクセス</a></li>
-      </ul>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く"><span></span><span></span></button>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="モバイルナビゲーション">
+      <a href="#concept">Concept</a><a href="#experience">Experience</a><a href="#stylist">Stylist</a>
+      <a href="#hairstyle">Hair Style</a><a href="#menu">Menu</a><a href="#access">Access</a>
+      <a href="#line">LINEで相談</a><a href="#reserve">初回予約</a>
     </nav>
-    <p class="footer__copyright">&copy; Un Jour. All Rights Reserved.</p>
-  </div>
-</footer>
+  </header>
 
-<script src="js/main.js"></script>
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-image" aria-hidden="true"></div><div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow hero-reveal hero-reveal--1">PRIVATE HAIR SALON / OMOTESANDO</p>
+        <h1 id="hero-title"><span class="title-mask"><span class="title-line hero-reveal hero-reveal--2">一人の時間を、</span></span><span class="title-mask"><span class="title-line hero-reveal hero-reveal--3">取り戻す美容室。</span></span></h1>
+        <div class="hero-copy hero-reveal hero-reveal--4"><p>髪を整える時間まで、誰かに気を遣わなくていい。</p><p>表参道にある、一席だけの完全予約制プライベートサロン。</p></div>
+        <div class="hero-actions hero-reveal hero-reveal--5"><a class="cta cta--primary" href="#reserve"><span>初回カウンセリングを予約する</span><span class="arrow" aria-hidden="true">→</span></a><a class="cta cta--secondary" href="#line"><span>LINEで事前に相談する</span><span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+      <a class="scroll-cue" href="#features" aria-label="特徴へスクロール" data-scroll-cue><span class="scroll-line"></span><span>SCROLL</span></a>
+    </section>
+
+    <section class="features" id="features" aria-label="サロンの特徴" data-reveal-list>
+      <div class="feature"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 25v-9a5 5 0 0 1 5-5h12a5 5 0 0 1 5 5v9M10 23v7a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4v-7M15 34v5m18-5v5M12 39h24"/></svg><span><b>一席だけの空間</b><small>完全個室・プライベートな時間をお約束します。</small></span></div>
+      <div class="feature"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="15" r="7"/><path d="M11 40v-5c0-8 5-13 13-13s13 5 13 13v5z"/></svg><span><b>最初から最後まで一人が担当</b><small>カウンセリングから仕上げまで、オーナーが一人で担当します。</small></span></div>
+      <div class="feature"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="11" width="32" height="30" rx="2"/><path d="M15 7v8m18-8v8M8 20h32M16 27h1m7 0h1m7 0h1m-17 7h1m7 0h1"/></svg><span><b>1日3組限定</b><small>丁寧に向き合うため、ご予約は1日3組まで。</small></span></div>
+      <div class="feature"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 20c0 10-13 22-13 22S11 30 11 20a13 13 0 1 1 26 0z"/><circle cx="24" cy="20" r="4"/></svg><span><b>表参道駅 徒歩4分</b><small>駅からの道順がわかりやすく、通いやすい立地です。</small></span></div>
+    </section>
+
+    <section class="empathy split-section reveal" aria-labelledby="empathy-title">
+      <div class="split-copy"><h2 id="empathy-title">美容室でまで、<br>頑張らなくていい。</h2><p>日々、誰かのために頑張っているあなたへ。<br>ここは、髪を整え、自分をゆるめる場所。</p><p>髪を整えることは、自分を大切にする時間。<br>一人の時間を取り戻し、明日を軽やかに迎えるために。</p></div>
+      <div class="split-image image-hover"><img src="assets/empathy-mirror.png" alt="鏡越しに穏やかに微笑む女性" loading="lazy"></div>
+    </section>
+
+    <section class="concept split-section reveal" id="concept" aria-labelledby="concept-title">
+      <div class="split-copy"><p class="section-label">CONCEPT</p><h2 id="concept-title">あなたが、<br>あなたに戻る一日を。</h2><p>Un Jour（アンジュール）は、表参道の静かな場所にある<br>一席だけのプライベートヘアサロンです。</p><p>今の気分と心にきちんと向き合い、<br>あなた自身の余白を取り戻していきます。</p></div>
+      <div class="split-image image-hover"><img src="assets/salon-hero.png" alt="一席だけの静かなサロン空間" loading="lazy"></div>
+    </section>
+
+    <section class="experience reveal" id="experience" aria-labelledby="experience-title">
+      <div class="experience-main"><div class="experience-copy"><p class="section-label">EXPERIENCE</p><h2 id="experience-title">過ごし方は、<br>あなたのペースで。</h2><div class="experience-steps">
+        <article><span>01</span><h3>ARRIVAL</h3><p>静かな個室で、席へご案内。</p></article><article><span>02</span><h3>COUNSELING</h3><p>丁寧なヒアリングで、想いの背景まで伺います。</p></article><article><span>03</span><h3>TREATMENT</h3><p>髪質や性格に合わせた、最適なケアをご提案。</p></article><article><span>04</span><h3>QUIET TIME</h3><p>髪を整えながら、ゆったり自分に還る時間。</p></article><article><span>05</span><h3>AFTERCARE</h3><p>明日からのお手入れ方法を分かりやすくお伝えします。</p></article>
+      </div></div><div class="experience-image image-hover"><img src="assets/experience-shampoo.png" alt="リラックスしてシャンプーを受ける女性" loading="lazy"></div></div>
+    </section>
+
+    <section class="stylist split-section reveal" id="stylist" aria-labelledby="stylist-title">
+      <div class="split-image stylist-image image-hover"><img src="assets/stylist-haruka.png" alt="スタイリスト 水野遥" loading="lazy"></div>
+      <div class="split-copy stylist-copy"><p class="section-label">STYLIST</p><h2 id="stylist-title">水野 遥 <small>/ Haruka Mizuno</small></h2><p>美容師歴15年。都内サロン勤務を経て、Un Jourをオープン。</p><p>お客様一人ひとりのライフスタイルに寄り添い、<br>その人らしい美しさを引き出すことを大切にしています。</p><dl><div><dt>CAREER</dt><dd>美容師歴15年 / 表参道エリア12年</dd></div><div><dt>SPECIALTY</dt><dd>ボブ・レイヤー・髪質改善</dd></div></dl><a class="gold-link" href="#reserve">ご予約・ご相談はこちら <span>→</span></a></div>
+    </section>
+
+    <section class="style-collection reveal" id="hairstyle" aria-labelledby="styles-title">
+      <div class="section-inner"><p class="section-label">STYLE COLLECTION</p><h2 id="styles-title" class="visually-hidden">スタイルコレクション</h2>
+        <div class="style-tabs" role="tablist" aria-label="スタイルカテゴリ"><button class="is-active" type="button" data-filter="all" role="tab" aria-selected="true">ALL</button><button type="button" data-filter="short" role="tab">SHORT</button><button type="button" data-filter="bob" role="tab">BOB</button><button type="button" data-filter="medium" role="tab">MEDIUM</button><button type="button" data-filter="long" role="tab">LONG</button></div>
+      </div>
+      <div class="style-slider" data-style-slider tabindex="0" aria-label="ヘアスタイルギャラリー">
+        <button class="slider-arrow slider-prev" type="button" aria-label="前のスタイル">←</button><div class="style-viewport"><div class="style-track">
+          <figure class="style-slide" data-category="short"><img src="assets/style-short.png" alt="柔らかなショートヘア" loading="lazy"><figcaption>Soft short / SHORT</figcaption></figure>
+          <figure class="style-slide" data-category="bob"><img src="assets/style-bob.png" alt="自然なボブヘア" loading="lazy"><figcaption>Quiet bob / BOB</figcaption></figure>
+          <figure class="style-slide" data-category="medium"><img src="assets/style-long.png" alt="軽やかなミディアムヘア" loading="lazy"><figcaption>Airy medium / MEDIUM</figcaption></figure>
+          <figure class="style-slide" data-category="long"><img src="assets/style-long.png" alt="柔らかなロングヘア" loading="lazy"><figcaption>Soft layers / LONG</figcaption></figure>
+          <figure class="style-slide" data-category="short"><img src="assets/style-short.png" alt="横顔を美しく見せるショートヘア" loading="lazy"><figcaption>Calm short / SHORT</figcaption></figure>
+        </div></div><button class="slider-arrow slider-next" type="button" aria-label="次のスタイル">→</button>
+        <div class="slider-status" aria-live="polite"><span data-current>01</span><i><b></b></i><span data-total>05</span></div>
+      </div>
+    </section>
+
+    <section class="menu-section reveal" id="menu" aria-labelledby="menu-title"><div class="section-inner"><p class="section-label">STYLE &amp; MENU</p><h2 id="menu-title" class="visually-hidden">スタイルとメニュー</h2><div class="menu-table">
+      <div><span>ベーシックカットコース</span><small>約90分</small><strong>¥11,000</strong></div><div><span>ケアカラーコース</span><small>約150分</small><strong>¥22,000</strong></div><div><span>プレミアムケアコース</span><small>約180分</small><strong>¥29,700</strong></div>
+    </div></div></section>
+
+    <section class="case-stories reveal" aria-labelledby="cases-title"><div class="section-inner"><p class="section-label">CASE STORIES</p><h2 id="cases-title" class="visually-hidden">施術事例</h2><div class="case-list">
+      <article class="case"><div class="comparison"><figure><span>BEFORE</span><img src="assets/case-01-before.png" alt="施術前の髪"></figure><figure><span>AFTER</span><img src="assets/case-01-after.png" alt="施術後のボブヘア"></figure></div><div class="case-copy"><span>CASE 01</span><h3>広がりやすい髪が、<br>まとまる艶髪に。</h3><h4>PROBLEM</h4><p>湿気で広がり、扱いにくい髪質。</p><h4>RESULT</h4><p>骨格に合わせたカットで、収まりのよいシルエットに。</p></div></article>
+      <article class="case"><div class="comparison"><figure><span>BEFORE</span><img src="assets/case-02-before.png" alt="施術前のロングヘア"></figure><figure><span>AFTER</span><img src="assets/case-02-after.png" alt="施術後のレイヤーヘア"></figure></div><div class="case-copy"><span>CASE 02</span><h3>伸ばしかけでも、<br>扱いやすく。</h3><h4>PROBLEM</h4><p>伸ばしかけでまとまらない。</p><h4>RESULT</h4><p>レイヤーで動きを調整し、軽やかに扱える髪へ。</p></div></article>
+    </div></div></section>
+
+    <section class="visit-guide reveal" aria-labelledby="guide-title"><div class="guide-grid"><div class="guide-intro"><p class="section-label">FIRST VISIT GUIDE</p><h2 id="guide-title">初めての方へ</h2><blockquote>一席だけの空間で、<br>周りを気にせずゆっくり<br>過ごせるのが嬉しいです。</blockquote><cite>30代・会社員</cite></div><ol class="guide-flow"><li><span>01</span><b>ご予約</b><small>WEBまたはLINEからご予約ください。</small></li><li><span>02</span><b>ご来店・カウンセリング</b><small>丁寧にお悩みをお伺いします。</small></li><li><span>03</span><b>施術</b><small>リラックスしてお過ごしください。</small></li><li><span>04</span><b>アフターケア</b><small>ご自宅でのケア方法をお伝えします。</small></li><li><span>05</span><b>次回のご提案</b><small>理想のスタイルを一緒に育てていきます。</small></li></ol></div>
+      <div class="faq-list"><details><summary>クレジットカードは使えますか？<span>＋</span></summary><p>各種クレジットカード・交通系ICをご利用いただけます。</p></details><details><summary>駐車場はありますか？<span>＋</span></summary><p>専用駐車場はございません。近隣のコインパーキングをご利用ください。</p></details><details><summary>子連れでも利用できますか？<span>＋</span></summary><p>完全貸切ですので、小さなお子様と一緒にご来店いただけます。</p></details><details><summary>施術時間はどのくらいかかりますか？<span>＋</span></summary><p>カット約90分、カラーを含むメニューは約150分が目安です。</p></details></div>
+    </section>
+
+    <section class="visit reveal" id="access" aria-labelledby="visit-title"><div class="section-inner"><p class="section-label">VISIT UN JOUR</p><h2 id="visit-title">サロンのご案内</h2><div class="space-grid">
+      <figure class="image-hover"><img src="assets/space-entrance.png" alt="サロン入口" loading="lazy"><figcaption><b>ENTRANCE</b><small>静かな通りに佇む、隠れ家の入口。</small></figcaption></figure><figure class="image-hover"><img src="assets/salon-hero.png" alt="スタイリングスペース" loading="lazy"><figcaption><b>STYLING SPACE</b><small>自然光がやさしく入る、一席だけの空間。</small></figcaption></figure><figure class="image-hover"><img src="assets/space-shampoo.png" alt="シャンプースペース" loading="lazy"><figcaption><b>SHAMPOO SPACE</b><small>フルフラットのシャンプー台でリラックス。</small></figcaption></figure><figure class="image-hover"><img src="assets/space-amenities.png" alt="アメニティ" loading="lazy"><figcaption><b>AMENITIES</b><small>厳選したプロダクトをご用意。</small></figcaption></figure>
+    </div><div class="access-grid"><div class="access-copy"><p class="section-label">ACCESS</p><address>Un Jour（アンジュール）<br>東京都渋谷区神宮前3-00-00 ビル1F<br>表参道駅 A3出口 徒歩4分</address><dl><div><dt>営業時間</dt><dd>10:00 – 20:00</dd></div><div><dt>定休日</dt><dd>不定休</dd></div></dl></div><div class="map" role="img" aria-label="表参道駅からUn Jourまでの地図"><span class="station">表参道駅<br>A3出口</span><i class="map-road map-road-a"></i><i class="map-road map-road-b"></i><b class="map-pin">● <span>Un Jour</span></b></div></div></div></section>
+
+    <section class="final-cta" id="reserve" aria-labelledby="reserve-title"><div class="final-overlay"></div><div class="final-inner reveal"><div><h2 id="reserve-title">美容室でまで、頑張らなくていい。</h2><p>一人の時間を取り戻す、ホテルのような美容室。</p></div><div class="final-actions"><a class="cta cta--primary" href="#top"><span>初回カウンセリングを予約する</span><span class="arrow">→</span></a><a class="cta cta--secondary" id="line" href="#top"><span>LINEで事前に相談する</span><span class="arrow">→</span></a></div></div></section>
+  </main>
+  <footer class="site-footer"><div><a class="logo" href="#top">Un Jour</a><small>PRIVATE HAIR SALON / OMOTESANDO</small></div><nav aria-label="フッターナビ"><a href="#concept">Concept</a><a href="#experience">Experience</a><a href="#stylist">Stylist</a><a href="#hairstyle">Style</a><a href="#menu">Menu</a><a href="#access">Access</a></nav><p>※このサイトは架空の美容室を想定したポートフォリオサイトです。</p></footer>
+  <div class="mobile-fixed-cta" aria-label="固定予約メニュー"><a href="#line">LINEで相談</a><a href="#reserve">初回予約</a></div>
+  <script src="script.js" defer></script>
 </body>
 </html>
